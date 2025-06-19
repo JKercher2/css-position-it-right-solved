@@ -1,38 +1,148 @@
 .robot-container {
+  height: 900px;
+  width: 1800px;
+  position: relative;
+  top: 90px;
+  background: beige;
+  border: 1px solid hotpink;
 }
 
 .robot-face-shape {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  top: 250px;
+  left: 700px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-eye-left {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 10px;
+  left: 282px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-eye-right {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  bottom: 90px;
+  left: 10px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-ear-left {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 10px;
+  left: 1100px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-ear-right {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  bottom: 90px;
+  left: 600px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-nose {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: -75px;
+  left: 150px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-teeth {
+  height: 100px;
+  width: 200px;
+  position: relative;
+  top: -20px;
+  left: 100px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-tooth {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-hair-style {
+  height: 100px;
+  width: 300px;
+  position: relative;
+  top: -450px;
+  left: 750px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
-.robot-hair-one {
+.robot-hair-one1 {
+  height: 70px;
+  width: 50px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
-.robot-hair-two {
+.robot-hair-two1 {
+  height: 60px;
+  width: 50px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background: beige;
+  border: 4px solid hotpink;
 }
 
 .robot-hair-three {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background: beige;
+  border: 4px solid hotpink;
+}
+
+.robot-hair-two {
+  height: 60px;
+  width: 50px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background: beige;
+  border: 4px solid hotpink;
+}
+
+.robot-hair-one {
+  height: 70px;
+  width: 50px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background: beige;
+  border: 4px solid hotpink;
 }
