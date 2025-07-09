@@ -1,51 +1,26 @@
 .robot-container {
-  height: 900px;
-  width: 1800px;
-  position: relative;
-  top: 90px;
-  background: #0000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .robot-face-shape {
-  clip-path: polygon(
-    0 50.72px,
-    40px 40px,
-    50.72px 0,
-    calc(100% - 50.72px) 0,
-    calc(100% - 40px) 40px,
-    100% 50.72px,
-    100% calc(100% - 50.72px),
-    calc(100% - 40px) calc(100% - 40px),
-    calc(100% - 50.72px) 100%,
-    50.72px 100%,
-    40px calc(100% - 40px),
-    0 calc(100% - 50.72px)
-  );
-  height: 700px;
-  width: 700px;
-  position: relative;
-  top: 100px;
-  left: 550px;
+  font-size: 10px;
+  height: 50em;
+  width: 500px;
+  position: absolute;
+  top: 250px;
+  left: 500px;
   background-image: linear-gradient(cadetblue, steelblue);
   border-radius: 10px;
+  border: solid palevioletred 4px;
 }
 
 .robot-eye-left {
-  height: 100px;
-  width: 100px;
-  position: relative;
-  top: 100px;
-  left: 500px;
-  background: beige;
-  border: 4px solid hotpink;
-}
-
-.robot-eye-right {
-  /* HTML: <div class="inner-curve"></div> */
-  --r: 20px; /* control the rounded part */
-  --s: 40px; /* control the size of the cut */
-  --a: 20deg; /* control the depth of the curvature */
-  --p: 50%; /* control the position */
+  --r: 90px; /* control the rounded part */
+  --s: 20px; /* control the size of the cut */
+  --a: 10deg; /* control the depth of the curvature */
+  --p: 40%; /* control the position */
 
   width: 200px;
   aspect-ratio: 2/3;
@@ -69,229 +44,352 @@
   height: 100px;
   width: 150px;
   position: relative;
-  bottom: 0px;
-  left: 110px;
+  bottom: -90px;
+  left: 70px;
   background: rebeccapurple;
+  border: black 3px solid;
+}
+
+.robot-eye-right {
+  /* HTML: <div class="sparkle"></div> */
+  height: 170px;
+  width: 170px;
+  background-image: url("https://picsum.photos/id/306/300/250");
+  background-position: -112px -50px;
+  mask: radial-gradient(#0000 71%, #000 72%) 10000% 10000%/99.5% 99.5%;
+  position: relative;
+  top: -50px;
+  left: 290px;
 }
 
 .robot-ear-left {
-  height: 100px;
-  width: 100px;
+  --t: 10%; /* control the tail part */
+  --h: 90%; /* control the head part */
+  aspect-ratio: 3/2;
+  width: 150px;
+  background: radial-gradient(crimson, gold);
+  clip-path: polygon(
+    0 calc(50% - var(--t) / 2),
+    calc(100% - var(--h)) calc(50% - var(--t) / 2),
+    calc(100% - var(--h)) 0,
+    100% 50%,
+    calc(100% - var(--h)) 100%,
+    calc(100% - var(--h)) calc(50% + var(--t) / 2),
+    0 calc(50% + var(--t) / 2)
+  );
+  height: 200px;
   position: relative;
-  top: -400px;
-  left: 1300px;
-  background: beige;
-  border: 4px solid hotpink;
+  top: 350px;
+  left: 1005px;
 }
 
 .robot-ear-right {
-  height: 100px;
-  width: 100px;
+  /* HTML: <div class="wifi-icon"></div> */
+  --n: 4; /* number of bars */
+
+  height: 280px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  --s: calc(100% / (2 * var(--n) - 1));
+  background: repeating-radial-gradient(
+    50% 50%,
+    #0000 0,
+    yellow,
+    blue 70px calc(var(--s) - 1px),
+    #0000 var(--s) calc(2 * var(--s))
+  );
+  mask: conic-gradient(#000 0 0) no-repeat 50% / var(--s) var(--s),
+    conic-gradient(
+      from -45deg at 50% calc(50% + var(--s) / 2),
+      #000 90deg,
+      #0000 0
+    );
   position: relative;
-  top: -500px;
-  left: 400px;
-  background: beige;
-  border: 4px solid hotpink;
+  rotate: -90deg;
+  top: 120px;
+  left: 335px;
 }
 
 .robot-nose {
   --p: 50px; /* control the shape (can be percentage) */
-  height: 180px;
   aspect-ratio: 3/2;
   clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
-  height: 150px;
-  width: 200px;
+  height: 90px;
+  width: 120px;
   position: relative;
-  top: 100px;
-  left: 250px;
+  top: -50px;
+  left: 195px;
   background-image: radial-gradient(darkgreen, yellow);
+  border: dashed gainsboro 4px;
 }
 
 .robot-teeth {
   height: 100px;
-  width: 200px;
+  width: 400px;
   position: relative;
-  top: 150px;
-  left: 250px;
-  background: beige;
-  border: 4px solid hotpink;
-}
-
-.robot-tooth {
-  height: 100px;
-  width: 100px;
-  position: relative;
-  top: 10px;
-  left: 10px;
-  background: beige;
-  border: 4px solid hotpink;
-}
-
-.robot-hair-style {
-  height: 100px;
-  width: 300px;
-  position: relative;
-  top: -900px;
-  left: 750px;
-  background: beige;
-  border: 4px solid hotpink;
-}
-
-.robot-hair-one1 {
-  height: 70px;
-  width: 50px;
-  position: relative;
-  top: 10px;
-  left: 5px;
-  background: beige;
-  border: 4px solid hotpink;
-}
-
-.robot-hair-two1 {
-  height: 60px;
-  width: 50px;
-  position: relative;
-  top: -60px;
-  left: 63px;
-  background: beige;
-  border: 4px solid hotpink;
-}
-
-.robot-hair-three {
-  height: 50px;
-  width: 50px;
-  position: relative;
-  top: -120px;
-  left: 121px;
-  background: beige;
-  border: 4px solid hotpink;
-}
-
-.robot-hair-two {
-  height: 60px;
-  width: 50px;
-  position: relative;
-  top: -170px;
-  left: 179px;
-  background: beige;
-  border: 4px solid hotpink;
-}
-
-.robot-hair-one {
-  height: 70px;
-  width: 50px;
-  position: relative;
-  top: -230px;
-  left: 237px;
-  background: beige;
-  border: 4px solid hotpink;
+  top: 0px;
+  left: 50px;
+  background: black;
+  border-radius: 20% 20% 20% 20%;
+  border: 4px solid chartreuse;
+  overflow: hidden;
 }
 
 .robot-tooth1 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
   height: 30px;
   width: 30px;
   position: relative;
   top: 0px;
-  left: 0px;
-  background: beige;
-  border: 4px solid hotpink;
+  left: 20px;
+  background-image: linear-gradient(grey, white 70%);
 }
 .robot-tooth2 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+  background-image: linear-gradient(grey, white 70%);
   height: 30px;
   width: 30px;
   position: relative;
   top: -30px;
-  left: 30px;
-  background: beige;
-  border: 4px solid hotpink;
+  left: 80px;
 }
 .robot-tooth3 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+  background-image: linear-gradient(grey, white 70%);
   height: 30px;
   width: 30px;
   position: relative;
   top: -60px;
-  left: 60px;
-  background: beige;
-  border: 4px solid hotpink;
+  left: 140px;
 }
 .robot-tooth4 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+  background-image: linear-gradient(grey, white 70%);
   height: 30px;
   width: 30px;
   position: relative;
   top: -90px;
-  left: 90px;
-  background: beige;
-  border: 4px solid hotpink;
+  left: 200px;
 }
 .robot-tooth5 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+  background-image: linear-gradient(grey, white 70%);
   height: 30px;
   width: 30px;
   position: relative;
   top: -120px;
-  left: 120px;
-  background: beige;
-  border: 4px solid hotpink;
+  left: 260px;
 }
 .robot-tooth6 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+  background-image: linear-gradient(grey, white 70%);
   height: 30px;
   width: 30px;
   position: relative;
   top: -150px;
-  left: 150px;
-  background: beige;
-  border: 4px solid hotpink;
+  left: 320px;
 }
 .robot-tooth7 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(white 30%, grey);
   height: 30px;
   width: 30px;
   position: relative;
-  top: -120px;
-  left: 0px;
-  background: beige;
-  border: 4px solid hotpink;
+  top: -118px;
+  left: 50px;
 }
 .robot-tooth8 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(white 30%, grey);
   height: 30px;
   width: 30px;
   position: relative;
-  top: -150px;
-  left: 30px;
-  background: beige;
-  border: 4px solid hotpink;
+  top: -148px;
+  left: 110px;
 }
 .robot-tooth9 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(white 30%, grey);
   height: 30px;
   width: 30px;
   position: relative;
-  top: -180px;
-  left: 60px;
-  background: beige;
-  border: 4px solid hotpink;
+  top: -178px;
+  left: 170px;
 }
 .robot-tooth10 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(white 30%, grey);
   height: 30px;
   width: 30px;
   position: relative;
-  top: -210px;
-  left: 90px;
-  background: beige;
-  border: 4px solid hotpink;
+  top: -208px;
+  left: 230px;
 }
 .robot-tooth11 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(white 30%, grey);
   height: 30px;
   width: 30px;
   position: relative;
-  top: -240px;
-  left: 120px;
-  background: beige;
-  border: 4px solid hotpink;
+  top: -238px;
+  left: 290px;
 }
 .robot-tooth12 {
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(white 30%, grey);
   height: 30px;
   width: 30px;
   position: relative;
-  top: -270px;
-  left: 150px;
-  background: beige;
-  border: 4px solid hotpink;
+  top: -268px;
+  left: 350px;
+}
+
+.robot-hair-style {
+  height: 50px;
+  width: 300px;
+  position: relative;
+  top: -290px;
+  left: 600px;
+  background-image: repeating-radial-gradient(azure 50px, limegreen);
+  border-radius: 50%;
+}
+
+.robot-hair-one1 {
+  --a: 90deg; /* control the angle */
+  --s: 50px; /* size of the zig-zag */
+  --b: 10px; /* control the thickness */
+  background-image: url("https://picsum.photos/id/41/100/100");
+  width: calc(var(--b) + var(--s) / (2 * tan(var(--a) / 2)));
+  min-height: 150px;
+  --_g: 100% var(--s) repeat-y
+    conic-gradient(
+      from calc(90deg - var(--a) / 2) at left,
+      #0000,
+      #000 1deg calc(var(--a) - 1deg),
+      #0000 var(--a)
+    );
+  mask: var(--b) 50% / var(--_g) exclude, 0 50% / var(--_g);
+  position: relative;
+  top: -110px;
+  left: -43px;
+  rotate: -35deg;
+}
+
+.robot-hair-two1 {
+  --s: 20px; /* control the shape (can be percentage) */
+  height: 100px;
+  aspect-ratio: 3/5;
+  clip-path: polygon(
+    100% 0,
+    calc(100% - var(--s)) 0,
+    0 50%,
+    calc(100% - var(--s)) 100%,
+    100% 100%,
+    var(--s) 50%
+  );
+  background: indianred;
+  position: relative;
+  top: -225px;
+  left: 59px;
+}
+
+.robot-hair-three {
+  height: 100px; /* control the size */
+  aspect-ratio: 0.56;
+  clip-path: polygon(
+    100% 0,
+    23% 46%,
+    46% 44%,
+    15% 69%,
+    38% 67%,
+    0 100%,
+    76% 57%,
+    53% 58%,
+    88% 33%,
+    60% 37%
+  );
+  background-image: linear-gradient(
+    gold,
+    silver,
+    gold,
+    silver,
+    gold,
+    silver,
+    gold
+  );
+  position: relative;
+  top: -357px;
+  left: 121px;
+  rotate: -18deg;
+}
+
+.robot-hair-two {
+  --s: 20px; /* control the shape (can be percentage) */
+
+  height: 100px;
+  aspect-ratio: 3/5;
+  clip-path: polygon(
+    0 0,
+    var(--s) 0,
+    100% 50%,
+    var(--s) 100%,
+    0 100%,
+    calc(100% - var(--s)) 50%
+  );
+  background: plum;
+  position: relative;
+  top: -425px;
+  left: 181px;
+}
+
+.robot-hair-one {
+  --s: 13px; /* size of the wave */
+  --b: 10px; /* thickness of the line */
+  --m: 0.1; /* curvature of the wave [0 2] */
+
+  --R: calc(var(--s) * sqrt(var(--m) * var(--m) + 1) + var(--b) / 2);
+  width: calc(2 * var(--R));
+  min-height: 150px;
+  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+  mask: radial-gradient(
+        var(--R) at top 50% right calc(-1 * var(--m) * var(--s)),
+        var(--_g)
+      )
+      calc(50% - var(--s) / 2 - var(--b) / 2) calc(50% - 2 * var(--s)) /
+      calc(var(--s) + var(--b)) calc(4 * var(--s)) repeat-y,
+    radial-gradient(
+        var(--R) at top 50% left calc(-1 * var(--m) * var(--s)),
+        var(--_g)
+      )
+      calc(50% + var(--s) / 2 + var(--b) / 2) 50% / calc(var(--s) + var(--b))
+      calc(4 * var(--s)) repeat-y;
+  background-image: linear-gradient(brown, burlywood, chocolate);
+  position: relative;
+  top: -560px;
+  left: 303px;
+  rotate: 35deg;
+}
+
+.robot-beauty-mark {
+  height: 10%;
+  width: 10%;
+  background-color: black;
+  position: absolute;
+  left: 100px;
+  top: 300px;
+  border-radius: 50%;
+  border: white solid 2px;
+  opacity: 0.5;
 }
